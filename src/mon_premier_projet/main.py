@@ -1,10 +1,10 @@
 from mon_premier_projet.module1 import *
 from mon_premier_projet.module2 import *
-from mon_premier_projet.movies.movie import create_movie, delete_movie
+from mon_premier_projet.movies.movie import create_movie, delete_movie, movies, get_movies
 from mon_premier_projet.utilitaires.maths import *
 from mon_premier_projet.utilitaires.text import *
 from mon_premier_projet.utilitaires.convert import *
-from mon_premier_projet.movies import *
+
 
 
 def main():
@@ -23,6 +23,11 @@ def main():
     create_movie("Inception")
     create_movie("Oppenheimer")
     delete_movie("Cars")
+    print(get_movies())
+    create_movie("mon film²")
+    print(get_movies())
+    delete_movie("mon film²")
+    print(get_movies())
 
 if __name__ == "__main__":
     main()

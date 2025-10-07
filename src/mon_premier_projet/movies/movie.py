@@ -6,4 +6,7 @@ def create_movie(title: str) -> None:
     })
 
 def delete_movie(title: str) -> None:
-    movies.pop(title)
+    movies.remove({"title":title})
+
+def get_movies():
+    return movies
