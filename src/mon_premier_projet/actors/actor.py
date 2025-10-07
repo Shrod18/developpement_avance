@@ -11,3 +11,8 @@ def remove_actor(actor: str, movie: str):
         "name": actor,
         "movie": movie
     })
+
+def get_actors(movie: str):
+    for actor in actors:
+        if actor["name"] == movie:
+            return actor
