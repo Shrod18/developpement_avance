@@ -9,6 +9,8 @@ from mon_premier_projet.utilitaires.convert import *
 from mon_premier_projet.POO.BankAccount import *
 from mon_premier_projet.POO.Person import *
 from mon_premier_projet.POO.Vehicle import *
+from mon_premier_projet.POO.Heritage import *
+from mon_premier_projet.POO.Animal import *
 
 def main():
     # print(hello_module1())
@@ -56,6 +58,14 @@ def main():
 
     car = Car()
     car.start()
+    car.stop()
+
+    child = Child()
+    child.method()
+
+    animals = [Dog("Rex"), Cat("Felix")]
+    for animal in animals:
+        animal.speak()
 
 if __name__ == "__main__":
     main()
