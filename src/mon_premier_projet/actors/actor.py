@@ -12,7 +12,5 @@ def remove_actor(actor: str):
             actors.remove(actor)
             break
 
-def get_actors(movie: str):
-    for actor in actors:
-        if actor["name"] == movie:
-            return actor
+def get_actors():
+    return actors

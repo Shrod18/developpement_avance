@@ -37,10 +37,9 @@ def main():
 
     add_actor("Harry Potter", "Daniel Radcliffe")
     add_actor("Mission impossible", "Tom Cruise")
-    print(get_actors("Harry Potter"))
+    print(get_actors())
     remove_actor("Daniel Radcliffe")
-    print(get_actors("Harry Potter"))
-    print(get_actors("Mission impossible"))
+    print(get_actors())
     print(get_avg_note())
 
 if __name__ == "__main__":
