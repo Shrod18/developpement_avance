@@ -1,11 +1,11 @@
 from mon_premier_projet.module1 import *
 from mon_premier_projet.module2 import *
-from mon_premier_projet.movies.movie import create_movie, delete_movie, movies, get_movies
+from mon_premier_projet.movies.movie import *
+from mon_premier_projet.notes.notes import *
+from mon_premier_projet.actors.actor import *
 from mon_premier_projet.utilitaires.maths import *
 from mon_premier_projet.utilitaires.text import *
 from mon_premier_projet.utilitaires.convert import *
-
-
 
 def main():
     # print(hello_module1())
@@ -16,18 +16,31 @@ def main():
     # print(to_lower_case("BANANE"))
     # print("20000 yen en euros :", yen_euros(20000))
     # print("2 euros en dollars :", euros_dollars(2))
-    create_movie("Harry Potter")
-    create_movie("Mission impossible")
-    create_movie("Cars")
-    create_movie("Toys Story")
-    create_movie("Inception")
-    create_movie("Oppenheimer")
-    delete_movie("Cars")
+
+    add_movie("Harry Potter")
+    add_movie("Mission impossible")
+    add_movie("Cars")
+    add_movie("Toys Story")
+    add_movie("Inception")
+    add_movie("Oppenheimer")
     print(get_movies())
-    create_movie("mon film²")
+    remove_movie("Cars")
     print(get_movies())
-    delete_movie("mon film²")
-    print(get_movies())
+
+    add_note(10, "Harry Potter")
+    add_note(14, "Toys Story")
+    add_note(18, "Inception")
+    add_note(15, "Oppenheimer")
+    add_note(14, "Mission impossible")
+    print(get_note("Harry Potter"))
+    print(get_highest_note())
+
+    add_actor("Harry Potter", "Daniel Radcliffe")
+    add_actor("Mission impossible", "Tom Cruise")
+    print(get_actors())
+    remove_actor("Daniel Radcliffe")
+    print(get_actors())
+    print(get_avg_note())
 
 if __name__ == "__main__":
     main()
