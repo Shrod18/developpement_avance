@@ -1,12 +1,6 @@
-from mon_premier_projet.module1 import *
-from mon_premier_projet.module2 import *
-from mon_premier_projet.movies.movie import *
-from mon_premier_projet.notes.notes import *
-from mon_premier_projet.actors.actor import *
-from mon_premier_projet.utilitaires.maths import *
-from mon_premier_projet.utilitaires.text import *
-from mon_premier_projet.utilitaires.convert import *
-from mon_premier_projet.POO.BankAccount import *
+from mon_premier_projet.Bank.BankAccount import *
+from mon_premier_projet.Bank.CompteBancaire import CompteBancaire
+from mon_premier_projet.Bank.ConvertibleMixin import *
 from mon_premier_projet.POO.Person import *
 from mon_premier_projet.POO.Vehicle import *
 from mon_premier_projet.POO.Heritage import *
@@ -50,6 +44,11 @@ def main():
     account = BankAccount(100)
     account.deposit(50)
     print(account.get_balance())
+    compte = CompteBancaire(100.0)
+    print(compte)
+    print(f"{compte.en_dollars():.2f} $")
+    print(f"{compte.en_livres():.2f} £")
+    print(f"{compte.convertir('USD'):.2f} $")
 
     p = Person("Alice", 30)
     print(p.name)
@@ -63,9 +62,12 @@ def main():
     child = Child()
     child.method()
 
-    animals = [Dog("Rex"), Cat("Felix")]
+    animals = [Dog("Felix", 4, "Ratier"), Cat("Felix", 2)]
     for animal in animals:
         animal.speak()
+
+    dog = Dog("Rex", 3, "Labrador")
+    print(dog.name, dog.age, dog.breed)
 
 if __name__ == "__main__":
     main()
