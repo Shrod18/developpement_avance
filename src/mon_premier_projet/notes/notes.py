@@ -1,3 +1,5 @@
+from statistics import mean
+
 notes = {}
 
 def add_note(note : int, movie: str):
@@ -13,4 +15,8 @@ def get_highest_note():
         if notes[movie] >= high_note:
             high_note = notes[movie]
             highest_movie = movie
-    return "Meilleure note : " + highest_movie + " " + str(high_note)
+    return "Meilleur film : " + highest_movie + " " + str(high_note)
+
+def get_avg_note():
+    avg_note = mean(notes.values())
+    return "Moyenne des notes : " + str(avg_note)

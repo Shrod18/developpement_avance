@@ -7,8 +7,6 @@ from mon_premier_projet.utilitaires.maths import *
 from mon_premier_projet.utilitaires.text import *
 from mon_premier_projet.utilitaires.convert import *
 
-
-
 def main():
     # print(hello_module1())
     # print("5 + 4 =", add(5,4))
@@ -18,6 +16,7 @@ def main():
     # print(to_lower_case("BANANE"))
     # print("20000 yen en euros :", yen_euros(20000))
     # print("2 euros en dollars :", euros_dollars(2))
+
     add_movie("Harry Potter")
     add_movie("Mission impossible")
     add_movie("Cars")
@@ -27,6 +26,7 @@ def main():
     print(get_movies())
     remove_movie("Cars")
     print(get_movies())
+
     add_note(10, "Harry Potter")
     add_note(14, "Toys Story")
     add_note(18, "Inception")
@@ -34,12 +34,14 @@ def main():
     add_note(14, "Mission impossible")
     print(get_note("Harry Potter"))
     print(get_highest_note())
+
     add_actor("Harry Potter", "Daniel Radcliffe")
     add_actor("Mission impossible", "Tom Cruise")
     print(get_actors("Harry Potter"))
     remove_actor("Daniel Radcliffe")
     print(get_actors("Harry Potter"))
     print(get_actors("Mission impossible"))
+    print(get_avg_note())
 
 if __name__ == "__main__":
     main()
