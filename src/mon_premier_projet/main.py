@@ -8,6 +8,7 @@ from mon_premier_projet.utilitaires.text import *
 from mon_premier_projet.utilitaires.convert import *
 from mon_premier_projet.POO.BankAccount import *
 from mon_premier_projet.POO.Person import *
+from mon_premier_projet.POO.Vehicle import *
 
 def main():
     # print(hello_module1())
@@ -52,6 +53,9 @@ def main():
     print(p.name)
     p.age = 35
     print(p.age)
+
+    car = Car()
+    car.start()
 
 if __name__ == "__main__":
     main()
