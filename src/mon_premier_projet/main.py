@@ -1,10 +1,11 @@
 from mon_premier_projet.Bank.BankAccount import *
 from mon_premier_projet.Bank.CompteBancaire import CompteBancaire
-from mon_premier_projet.Bank.ConvertibleMixin import *
 from mon_premier_projet.POO.Person import *
-from mon_premier_projet.POO.Vehicle import *
 from mon_premier_projet.POO.Heritage import *
 from mon_premier_projet.POO.Animal import *
+from mon_premier_projet.POO.Decorateur import *
+from mon_premier_projet.Vehicle.Vehicle import *
+from mon_premier_projet.Vehicle.VehicleFactory import *
 
 def main():
     # print(hello_module1())
@@ -41,6 +42,7 @@ def main():
     # print(get_actors())
     # print(get_avg_note())
 
+    #Bank
     account = BankAccount(100)
     account.deposit(50)
     print(account.get_balance())
@@ -50,24 +52,31 @@ def main():
     print(f"{compte.en_livres():.2f} £")
     print(f"{compte.convertir('USD'):.2f} $")
 
+    # Person
     p = Person("Alice", 30)
     print(p.name)
     p.age = 35
     print(p.age)
-
-    car = Car()
-    car.start()
-    car.stop()
-
     child = Child()
     child.method()
 
+    #Animal
     animals = [Dog("Felix", 4, "Ratier"), Cat("Felix", 2)]
     for animal in animals:
         animal.speak()
-
     dog = Dog("Rex", 3, "Labrador")
     print(dog.name, dog.age, dog.breed)
+
+    #Vehicle
+    car = Car()
+    car.start()
+    car.stop()
+    car = VehicleFactory.create_vehicle("car")
+    print(car.drive())
+    bike = VehicleFactory.create_vehicle("bike")
+    print(bike.drive())
+    truck = VehicleFactory.create_vehicle("truck")
+    print(truck.drive())
 
 if __name__ == "__main__":
     main()

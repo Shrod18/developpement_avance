@@ -9,9 +9,7 @@ class Vehicle(ABC):
     def stop(self):
         pass
 
-class Car(Vehicle):
-    def start(self):
-        print('Démarrage du moteur...')
+    @abstractmethod
+    def drive(self):
+        pass
 
-    def stop(self):
-        print('Freinage...')
